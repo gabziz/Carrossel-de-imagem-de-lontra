@@ -1,0 +1,115 @@
+body{
+    background-color: #919167;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/fundo2.webp);
+}
+
+header{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    display: block;
+    padding: 30px;
+    background: rgba(191, 209, 175, 0.6);
+    position: fixed;
+    width: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);    
+}    
+
+/*Formatação do container*/
+
+.container{
+    border: 5px solid #a5b090;
+    height: 560px;
+    width: 900px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Formatação da navegação*/
+
+.navegacao{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar{
+    background-color: rgba(235, 235, 32, 0.4);
+    width: 30px;
+    height: 6px;
+    margin:  6px ;
+    transition: .3s;
+}
+
+.bar:hover{
+    background-color: rgba(236, 236, 33);
+}
+
+input {
+    display: none;    
+}
+
+.imagens{
+    display: flex;
+    width: 600%;/*proporcional com a quatidade de imagens,por exemplo,se for 9 imagem botar 900%,2 imagens botar 200%*/
+    height: 100%;
+}
+.imagem{
+    width:16.6666666667%;/*100% é o tamanho do container,e são 6 imagens,então é 100 dividido por 6 = 16.6666666667%*/
+    transition: .3s;
+  
+}
+
+.imagem img{
+    width:100%; 
+    height: 100%;
+}
+
+/*Transição das imagens*/
+
+#imagem1:checked ~ .img1 {
+    margin-left: 0;
+}
+
+#imagem2:checked ~ .img1{
+    margin-left: -16.6666666667% ;
+    /* pegar esse valor e ir somando 
+    exemplo 16.6666666667+16.6666666667=33.333333333
+    16.6666666667+16.6666666667+16.6666666667+16.6666666667=50.0000000001*/
+}
+
+#imagem3:checked ~ .img1{
+    margin-left: -33.3333333334%;
+}
+
+#imagem4:checked ~ .img1{
+    margin-left: -50.0000000001%;
+}
+
+#imagem5:checked ~ .img1{
+    margin-left: -66.6666666668%;
+}
+
+#imagem6:checked ~ .img1{
+    margin-left: -83.3333333335%;
+}
+
+footer {
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0vh;
+    left: 0;
+    text-align: center;
+    background-color: #96ac64;
+    padding: 8px;
+}
